@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+    li {
+        list-style: none;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #000000;
+
+    }
+
+}
+
+body {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    max-width: 1440px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+img {
+    object-fit: cover;
+}

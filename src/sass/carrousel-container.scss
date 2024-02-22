@@ -1,0 +1,18 @@
+.carrousel-container {
+
+    max-width: 1241px;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        color: rgb(254, 96, 97);
+    }
+
+    img {
+        height: 415px;
+    }
+
+    .carrousel {
+        display: flex;
+    }
+}

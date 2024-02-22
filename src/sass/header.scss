@@ -1,0 +1,37 @@
+.main-header {
+
+    max-width: 1440px;
+    background: rgb(255, 255, 255);
+    ;
+
+    .header {
+
+        max-width: 1240px;
+        padding: 40px 0;
+        margin: 0 100px;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+
+
+        nav {
+            ul {
+                display: flex;
+                gap: 60px;
+
+                a {
+                    text-decoration: none;
+                    text-transform: uppercase;
+
+                    &.underline {
+                        text-decoration: underline;
+                    }
+                }
+
+                li {
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+}
