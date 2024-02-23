@@ -9,7 +9,7 @@ const Thumb = ({ logements }) => {
     </Link>
   ));
 };
-Thumb.PropTypes = {
+Thumb.propTypesropTypes = {
   logements: PropTypes.array.isRequired,
 };
 
