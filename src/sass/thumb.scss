@@ -26,10 +26,15 @@
 
     }
 
+    .thumb {
+        position: relative;
+    }
+
     h3 {
         position: absolute;
         text-align: left;
-        top: 90%;
+
+        top: 80%;
         left: 35%;
         transform: translate(-50%, -50%);
         color: white;

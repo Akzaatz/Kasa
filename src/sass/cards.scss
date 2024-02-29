@@ -2,9 +2,9 @@
     margin-top: 40px;
     width: 100%;
     display: grid;
+    justify-content: space-around;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, 1fr);
-
 
     .card-name {
         grid-column: 1;
@@ -78,6 +78,30 @@
             color: #e3e3e3;
         }
     }
+
+    .CollapsesButtons {
+        max-width: 1024px;
+        display: flex;
+        gap: 75px;
+
+        .description-button,
+        .equipements-button {
+            .collapses-content {
+                width: 582px;
+            }
+
+
+            .arrow {
+                width: 1em;
+                height: auto;
+
+            }
+        }
+    }
+
+
+
+
 
 
 

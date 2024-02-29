@@ -24,7 +24,8 @@
             background: rgb(254, 96, 97);
 
             .arrow {
-                transition: transform 0.3s ease; // Ajoute une transition pour l'effet de rotation
+                cursor: pointer;
+                transition: transform 0.5s ease; // Ajoute une transition pour l'effet de rotation
             }
         }
 
@@ -34,15 +35,18 @@
             }
 
             .paragraph {
+                // height: 0;
+                z-index: -1;
                 visibility: visible; // Rend le paragraphe visible
                 transition: opacity 0.3s ease; // Ajoute une transition pour l'animation
-                padding: 20px; // Ajoutez le padding ici
+                padding: 40px; // Ajoutez le padding ici
                 transform: translateY(0);
+                transition: transform 0.5s ease;
             }
         }
 
         .paragraph {
-            padding: 10px; // Vous pouvez ajuster le padding de base ici
+            padding: 10px;
             background: #f6f6f6;
             font-size: 1.125rem;
             text-align: left;

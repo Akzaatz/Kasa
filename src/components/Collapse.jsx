@@ -1,8 +1,8 @@
-import { Children, useState } from "react";
-import arrow from "../assets/img/arrow-up.png";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
+import arrow from "../assets/img/arrow-up.png";
 
-const Collapses = ({ title, children }) => {
+const Collapse = ({ title, content }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleToggle = () => {
@@ -21,15 +21,16 @@ const Collapses = ({ title, children }) => {
           />
         </div>
         <div className={`paragraph ${isVisible ? "animate" : ""}`}>
-          {children}
+          {content}
         </div>
       </div>
     </div>
   );
 };
 
-Collapses.propTypes = {
+Collapse.propTypes = {
   title: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
+  content: PropTypes.any.isRequired,
 };
-export default Collapses;
+
+export default Collapse;

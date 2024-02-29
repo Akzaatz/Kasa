@@ -4,11 +4,11 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Error from "./pages/Error";
 import Logement from "./Logement";
-import Collapses from "./Collapses";
-import Slider from "./Slider";
+// import Collapse from "./Collapse";
+// import Slider from "./Slider";
 
-import Tags from "./Tags";
-import Ratings from "./Ratings";
+// import Tags from "./Tags";
+// import Ratings from "./Ratings";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {

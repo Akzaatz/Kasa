@@ -1,5 +1,7 @@
+import React from "react";
 import { useParams } from "react-router-dom";
 import logement from "../components/data/logements.json";
+import Collapse from "./Collapse";
 import Slider from "./Slider";
 import Tags from "./Tags";
 import Ratings from "./Ratings";
@@ -24,6 +26,7 @@ const Logement = () => {
       <div className="carrousel">
         <Slider />
       </div>
+
       <div className="card">
         <div className="card-name">
           <h1>{title}</h1>
@@ -31,7 +34,6 @@ const Logement = () => {
         </div>
         <div className="card-host">
           <p>{host.name}</p>
-
           <div>
             <img src={host.picture} alt="portrait du propriétaire" />
           </div>
@@ -44,24 +46,24 @@ const Logement = () => {
             <Ratings logement={logementData} />
           </div>
         </div>
-
-        <div>
-          <h2>
-            Description
-            <span>
-              <i class="fa-solid fa-chevron-up"></i>
-            </span>
-          </h2>
-          {/* <p>{description}</p> */}
-        </div>
-        <div>
-          <h2>
-            Équipements
-            <span>
-              <i class="fa-solid fa-chevron-up"></i>
-            </span>{" "}
-          </h2>
-          {/* <p>:{equipments}</p> */}
+        <div className="CollapsesButtons">
+          <div className="description-button">
+            <Collapse title="Description" content={description} />
+          </div>
+          <div className="equipements-button">
+            <Collapse
+              title="Équipements"
+              content={
+                <ul>
+                  {equipments.map((equipement, index) => (
+                    <div key={index} className="li">
+                      <li Key={equipement}>{equipement} </li>
+                    </div>
+                  ))}
+                </ul>
+              }
+            />
+          </div>
         </div>
       </div>
     </div>

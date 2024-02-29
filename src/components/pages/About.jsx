@@ -1,7 +1,7 @@
+import React from "react";
 import banniere1 from "../../assets/img/mountains.png";
-import Collapses from "../Collapses";
+import Collapse from "../Collapse";
 import colapsJson from "../data/colaps.json";
-import logements from "../data/logements.json";
 
 const About = () => {
   return (
@@ -10,12 +10,9 @@ const About = () => {
         <div className="banner-about">
           <img src={banniere1} alt="Paysage de montagnes" />
         </div>
-        <div className="collapse-container">
+        <div>
           {colapsJson.map((colaps, index) => (
-            <Collapses key={index} index={index} title={colaps.Title}>
-              {" "}
-              {colaps.Text}
-            </Collapses>
+            <Collapse key={index} title={colaps.Title} content={colaps.Text} />
           ))}
         </div>
       </div>
