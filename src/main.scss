@@ -1,9 +1,11 @@
 @use "../src/sass/settings.scss";
-@use "../src/sass/app.scss";
+@use "../src/sass/about.scss";
 @use "../src/sass/header.scss";
 @use "../src/sass/footer.scss";
 @use "../src/sass/main-container.scss";
 @use "../src/sass/carrousel-container.scss";
 @use "../src/sass/slider.scss";
 @use "../src/sass/cards.scss";
-@use "../src/sass/thumb.scss"
+@use "../src/sass/thumb.scss";
+@use "../src/sass/error.scss";
+@use "../src/sass/collapse.scss";

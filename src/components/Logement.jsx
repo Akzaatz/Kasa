@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import logement from "../components/data/logements.json";
 import Slider from "./Slider";
 import Tags from "./Tags";
+import Ratings from "./Ratings";
 
 const findLogementID = (id) => {
   return logement.find((logement) => logement.id === id);
@@ -30,7 +31,7 @@ const Logement = () => {
         </div>
         <div className="card-host">
           <p>{host.name}</p>
-          <p>{rating} étoiles</p>
+
           <div>
             <img src={host.picture} alt="portrait du propriétaire" />
           </div>
@@ -38,10 +39,30 @@ const Logement = () => {
         <div className="tags-container">
           <Tags logementId={id} />
         </div>
-        <div className="equipements">
-          <p>équipements: {equipments}</p>
+        <div className="ratings">
+          <div>
+            <Ratings logement={logementData} />
+          </div>
         </div>
-        <p>Description de l'annonce: {description}</p>
+
+        <div>
+          <h2>
+            Description
+            <span>
+              <i class="fa-solid fa-chevron-up"></i>
+            </span>
+          </h2>
+          {/* <p>{description}</p> */}
+        </div>
+        <div>
+          <h2>
+            Équipements
+            <span>
+              <i class="fa-solid fa-chevron-up"></i>
+            </span>{" "}
+          </h2>
+          {/* <p>:{equipments}</p> */}
+        </div>
       </div>
     </div>
   );
