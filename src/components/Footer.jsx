@@ -1,9 +1,9 @@
 import React from "react";
 import logoFooter from "../assets/img/logoFooter.png";
 
-const Footer = () => {
+const Footer = ({ listeDeployee }) => {
   return (
-    <div className="footer">
+    <div className={`footer ${listeDeployee ? "footer-shifted" : ""}`}>
       <div className="logo-footer">
         <img src={logoFooter} alt="Logo Footer" />
       </div>
