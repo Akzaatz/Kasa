@@ -1,0 +1,101 @@
+.card {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 45px;
+    width: 100%;
+
+    @media screen and (max-width: $breakpoint-desktop) {
+        flex-direction: column;
+    }
+
+    .card-location-container {
+        display: flex;
+        flex-direction: column;
+
+        .card-location-container-name {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            font-weight: 500;
+            font-size: 18px;
+            color: $primary-color;
+
+            h1 {
+                margin-bottom: 10px;
+            }
+
+            p {
+                color: $fourth-color;
+                margin-bottom: 25px;
+            }
+        }
+
+        .card-location-container-tags {
+            .tags-container-tags {
+                display: flex;
+
+                .tags {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 25px;
+                    background: #ff6060;
+                    @include small-radius;
+                    font-weight: 700;
+                    font-size: 14px;
+                    padding: 0.125rem 0.625rem;
+                    margin: 0 10px 25px 0;
+
+                    p {
+                        color: $tertiary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .card-host-container {
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (max-width: $breakpoint-desktop) {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+
+        .card-host-container-name {
+            display: flex;
+            justify-content: flex-end;
+            text-align: left;
+            font-weight: 500;
+            font-size: 18px;
+            color: $primary-color;
+
+            p {
+                width: 30%;
+                padding: 5px 10px 0 0;
+                color: $primary-color;
+                font-weight: 500;
+                font-size: 18px;
+            }
+
+            img {
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+                margin-bottom: 15px;
+            }
+        }
+
+        .card-host-container-ratings {
+            display: flex;
+            justify-content: flex-end;
+
+            .stars {
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,48 @@
+.carrousel-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .slider-carrousel {
+        position: relative;
+
+        h1 {
+            color: $primary-color;
+            margin-bottom: 10px;
+            font-weight: 500;
+            font-size: 2.25rem;
+        }
+
+        img {
+            max-width: 100%;
+            height: 415px;
+            width: 1241px;
+
+            @media screen and (max-width: $breakpoint-desktop) {
+                min-width: 335px;
+            }
+        }
+
+        .fa-chevron-right,
+        .fa-chevron-left {
+            color: white;
+            cursor: pointer;
+            position: absolute;
+            font-size: 3.5rem;
+            top: 45%;
+
+            @media screen and (max-width: $breakpoint-desktop) {}
+        }
+
+        .fa-chevron-left {
+            left: 15px;
+        }
+
+        .fa-chevron-right {
+            right: 15px;
+        }
+    }
+}

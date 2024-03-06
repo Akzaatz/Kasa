@@ -22,8 +22,8 @@ const PictureSlider = ({ slides }) => {
   };
 
   return (
-    <div className="slider">
-      <div className="carrousel">
+    <div className="bird">
+      <div className="slider-carrousel">
         <i className="fa-solid fa-chevron-left" onClick={prevSlide}></i>
         <i className="fa-solid fa-chevron-right" onClick={nextSlide}></i>
         {pictures.map((picture, index) => {

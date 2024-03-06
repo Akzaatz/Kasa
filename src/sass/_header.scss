@@ -4,6 +4,12 @@
     background: rgb(255, 255, 255);
     ;
 
+    @media screen and (max-width: 800px) {
+        display: flex;
+        justify-content: center;
+    }
+
+
     .header {
 
         max-width: 1240px;
@@ -13,10 +19,37 @@
         display: flex;
         justify-content: space-between;
 
+        @media screen and (max-width: 800px) {
+            min-width: 335px;
+            height: 111px;
+
+            padding-left: 0;
+        }
+
+
+        @media screen and (max-width: 800px) {
+
+
+            img {
+                width: 145px;
+            }
+
+            ul {
+                align-items: center;
+
+            }
+
+            li {
+                font-size: 0.75rem;
+            }
+
+
+        }
 
         nav {
             ul {
                 display: flex;
+
                 gap: 60px;
 
                 a {
@@ -32,6 +65,14 @@
                     margin: 0 10px;
                 }
             }
+
+            @media screen and (max-width: 800px) {
+                ul {
+                    gap: 0;
+                }
+
+            }
+
         }
     }
 }

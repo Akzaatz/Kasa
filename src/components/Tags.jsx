@@ -10,7 +10,7 @@ const Tags = ({ logementId }) => {
   }
 
   return (
-    <ul className="tags-container">
+    <ul className="tags-container-tags">
       {logement.tags.map((tag, index) => (
         <li className="tags" key={index}>
           <p>{tag}</p>

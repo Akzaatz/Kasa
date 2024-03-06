@@ -1,0 +1,95 @@
+.collapse-container {
+  align-items: center;
+  max-width: 1023px;
+
+  .collapses-content {
+    width: 100%;
+
+    .headCollapses {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      font-size: 24px;
+      color: $tertiary-color;
+      padding: 10px;
+      font-weight: 700;
+      background: rgb(254, 96, 97);
+
+      .arrow {
+        cursor: pointer;
+        transition: transform 0.5s ease; // Ajoute une transition pour l'effet de rotation
+      }
+    }
+
+    &.visible {
+      .arrow {
+        transform: rotate(-180deg); // Rotation de 180 degrés lorsque le collapse est visible
+      }
+
+      .paragraph {
+        z-index: -1;
+        visibility: visible; // Rend le paragraphe visible
+        transition: opacity 0.3s ease; // Ajoute une transition pour l'animation
+        padding: 20px 10px;
+        transform: translateY(0);
+        transition: transform 0.5s ease;
+      }
+    }
+
+    .paragraph {
+      padding: 10px;
+      background: $secondary-color;
+      font-size: 1.125rem;
+      text-align: left;
+      overflow: hidden; // Masque le contenu qui dépasse de la zone
+      visibility: hidden; // Rend le paragraphe invisible au départ
+      transform: translateY(-80px);
+
+      &.animate {
+        height: max-content;
+      }
+    }
+
+    li {
+      font-size: 1.125rem;
+      font-weight: 400;
+    }
+  }
+}
+
+.CollapsesButtons {
+  width: 100%;
+  margin: 0 10px;
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: $breakpoint-desktop) {
+    flex-direction: column;
+    min-width: 335px;
+
+  }
+
+  gap: 75px;
+
+  .description-button {
+    width: 582px;
+    height: 120px;
+
+    @media screen and (max-width: $breakpoint-desktop) {
+      width: 100%;
+    }
+  }
+
+  .equipements-button {
+    width: 582px;
+    height: 120px;
+
+    @media screen and (max-width: $breakpoint-desktop) {
+      width: 100%;
+    }
+
+
+  }
+
+
+}

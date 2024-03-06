@@ -11,24 +11,33 @@
         inset: 0;
         opacity: 50%;
         content: "";
-        background: black;
-        border-radius: 20px;
+        background: $fourth-color;
+
+        @media screen and (max-width: $breakpoint-desktop) {
+            display: none;
+        }
+
     }
+
+
+
 
     &:hover {
         transform: scale(1.1);
+
+        @media screen and (max-width:1050px) {
+            transform: none;
+        }
     }
 
     img {
         width: 100%;
         height: 100%;
-        border-radius: 20px;
-
-    }
-
-    .thumb {
+        @include small-radius;
         position: relative;
     }
+
+
 
     h3 {
         position: absolute;
@@ -37,10 +46,26 @@
         top: 80%;
         left: 35%;
         transform: translate(-50%, -50%);
-        color: white;
+        color: $tertiary-color;
         font-size: 1.12rem;
         font-weight: 700;
         line-height: 26px
     }
 
+    @media screen and (max-width: $breakpoint-desktop) {
+
+
+        img {
+
+            height: 15rem;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            top: -70px;
+
+            z-index: 1;
+
+        }
+    }
 }

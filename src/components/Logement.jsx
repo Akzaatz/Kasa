@@ -45,44 +45,51 @@ const Logement = () => {
       </div>
 
       <div className="card">
-        <div className="card-name">
-          <h1>{title}</h1>
-          <p>{location}</p>
-        </div>
-        <div className="card-host">
-          <p>{host.name}</p>
-          <div>
-            <img src={host.picture} alt="portrait du propriétaire" />
+        <div className="card-location-container">
+          <div className="card-location-container-name">
+            <h1>{title}</h1>
+            <p>{location}</p>
+          </div>
+          <div className="card-location-container-tags">
+            <Tags logementId={id} />
           </div>
         </div>
-        <div className="tags-container">
-          <Tags logementId={id} />
-        </div>
-        <div className="ratings">
-          <div>
-            <Ratings logement={logementData} />
-          </div>
-        </div>
-        <div className="CollapsesButtons">
-          <div className="description-button">
-            <Collapse title="Description" content={description} />
+
+        <div className="card-host-container">
+          <div className="card-host-container-name">
+            <p>{host.name}</p>
+
+            <div>
+              <img src={host.picture} alt="portrait du propriétaire" />
+            </div>
           </div>
 
-          <div className="equipements-button">
-            <Collapse
-              title="Équipements"
-              content={
-                <ul className={listeDeployee ? "liste-deployee" : ""}>
-                  {equipments.map((equipement, index) => (
-                    <div key={index} className="li">
-                      <li key={equipement}>{equipement} </li>
-                    </div>
-                  ))}
-                </ul>
-              }
-              onToggle={toggleListe}
-            />
+          <div className="card-host-container-ratings">
+            <div>
+              <Ratings logement={logementData} />
+            </div>
           </div>
+        </div>
+      </div>
+      <div className="CollapsesButtons">
+        <div className="description-button">
+          <Collapse title="Description" content={description} />
+        </div>
+
+        <div className="equipements-button">
+          <Collapse
+            title="Équipements"
+            content={
+              <ul className={listeDeployee ? "liste-deployee" : ""}>
+                {equipments.map((equipement, index) => (
+                  <div key={index} className="li">
+                    <li key={equipement}>{equipement} </li>
+                  </div>
+                ))}
+              </ul>
+            }
+            onToggle={toggleListe}
+          />
         </div>
       </div>
     </div>

@@ -11,17 +11,8 @@
         font-size: 1.5rem;
         font-weight: 500;
         color: #000000;
-
     }
-
-    $primary-color: #ff6060;
-    $secondary-color: #f7f7f7;
-    $tertiary-color: #FFFFFF;
-
 }
-
-
-
 
 body {
     margin: 0 auto;
@@ -31,8 +22,7 @@ body {
     text-align: center;
     font-family: "Montserrat", sans-serif;
 
-}
-
-img {
-    object-fit: cover;
+    img {
+        object-fit: cover;
+    }
 }
