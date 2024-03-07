@@ -1,25 +1,24 @@
 .main-header {
 
-    max-width: 1440px;
+    max-width: 1240px;
     background: rgb(255, 255, 255);
-    ;
 
-    @media screen and (max-width: 800px) {
-        display: flex;
+    @media screen and (max-width: $breakpoint-desktop) {
+        display: block;
         justify-content: center;
     }
 
-
     .header {
-
         max-width: 1240px;
         padding: 40px 0;
-        margin: 0 100px;
+
         align-items: center;
         display: flex;
         justify-content: space-between;
 
-        @media screen and (max-width: 800px) {
+
+
+        @media screen and (max-width: $breakpoint-desktop) {
             min-width: 335px;
             height: 111px;
 
@@ -27,29 +26,24 @@
         }
 
 
-        @media screen and (max-width: 800px) {
-
-
+        @media screen and (max-width: $breakpoint-desktop) {
             img {
                 width: 145px;
             }
 
             ul {
                 align-items: center;
-
             }
 
             li {
                 font-size: 0.75rem;
+                width: 100%;
             }
-
-
         }
 
         nav {
             ul {
                 display: flex;
-
                 gap: 60px;
 
                 a {
@@ -65,14 +59,6 @@
                     margin: 0 10px;
                 }
             }
-
-            @media screen and (max-width: 800px) {
-                ul {
-                    gap: 0;
-                }
-
-            }
-
         }
     }
 }

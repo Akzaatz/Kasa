@@ -9,11 +9,16 @@
       align-items: center;
       display: flex;
       justify-content: space-between;
-      font-size: 24px;
+      font-size: 1.125rem;
       color: $tertiary-color;
       padding: 10px;
       font-weight: 700;
       background: rgb(254, 96, 97);
+
+      @media screen and (max-width: $breakpoint-desktop) {
+        height: 30px;
+        font-size: 0.813rem;
+      }
 
       .arrow {
         cursor: pointer;
@@ -48,6 +53,10 @@
       &.animate {
         height: max-content;
       }
+
+      @media screen and (max-width: $breakpoint-desktop) {
+        font-size: 0.813rem;
+      }
     }
 
     li {
@@ -67,6 +76,7 @@
     flex-direction: column;
     min-width: 335px;
 
+
   }
 
   gap: 75px;
@@ -77,6 +87,7 @@
 
     @media screen and (max-width: $breakpoint-desktop) {
       width: 100%;
+
     }
   }
 

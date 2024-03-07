@@ -23,6 +23,7 @@
 
             @media screen and (max-width: $breakpoint-desktop) {
                 min-width: 335px;
+                height: 255px;
             }
         }
 
@@ -34,7 +35,9 @@
             font-size: 3.5rem;
             top: 45%;
 
-            @media screen and (max-width: $breakpoint-desktop) {}
+            @media screen and (max-width: $breakpoint-desktop) {
+                font-size: 1.7rem;
+            }
         }
 
         .fa-chevron-left {
