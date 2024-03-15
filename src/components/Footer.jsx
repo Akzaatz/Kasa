@@ -4,7 +4,7 @@ import logoFooter from "../assets/img/logoFooter.png";
 const Footer = ({ listeDeployee }) => {
   return (
     <div className="main-footer">
-      <div className={`footer ${listeDeployee ? "footer-shifted" : ""}`}>
+      <div className="footer">
         <div className="logo-footer">
           <img src={logoFooter} alt="Logo Footer" />
         </div>

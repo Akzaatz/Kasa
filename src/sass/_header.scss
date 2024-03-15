@@ -1,16 +1,19 @@
 .main-header {
 
-    max-width: 1240px;
+    max-width: 1440px;
+    margin: 45px 100px;
+
     background: rgb(255, 255, 255);
 
     @media screen and (max-width: $breakpoint-desktop) {
-        display: block;
+        display: flex;
         justify-content: center;
+        margin: 0 10px;
     }
 
     .header {
         max-width: 1240px;
-        padding: 40px 0;
+
 
         align-items: center;
         display: flex;
@@ -29,6 +32,10 @@
         @media screen and (max-width: $breakpoint-desktop) {
             img {
                 width: 145px;
+
+
+
+
             }
 
             ul {
@@ -58,6 +65,13 @@
                 li {
                     margin: 0 10px;
                 }
+            }
+
+            @media screen and (max-width:$breakpoint-desktop) {
+                ul {
+                    gap: 0;
+                }
+
             }
         }
     }

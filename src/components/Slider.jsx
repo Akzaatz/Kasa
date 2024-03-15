@@ -21,11 +21,18 @@ const PictureSlider = ({ slides }) => {
     setShowSlide(showSlide === length - 1 ? 0 : showSlide + 1);
   };
 
+  // Vérifie si vous avez plus d'une image et si pictures est défini
+  const shouldShowArrows = length > 1 && pictures;
+
   return (
     <div className="bird">
       <div className="slider-carrousel">
-        <i className="fa-solid fa-chevron-left" onClick={prevSlide}></i>
-        <i className="fa-solid fa-chevron-right" onClick={nextSlide}></i>
+        {shouldShowArrows && (
+          <>
+            <i className="fa-solid fa-chevron-left" onClick={prevSlide}></i>
+            <i className="fa-solid fa-chevron-right" onClick={nextSlide}></i>
+          </>
+        )}
         {pictures.map((picture, index) => {
           return (
             <img
