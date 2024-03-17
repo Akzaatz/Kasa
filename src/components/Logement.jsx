@@ -1,3 +1,4 @@
+// on importe les modules et composants nécessaires pour construire la page
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import logement from "../components/data/logements.json";
@@ -7,6 +8,7 @@ import Tags from "./Tags";
 import Ratings from "./Ratings";
 import { Link } from "react-router-dom";
 
+// on importe les données de chaque logement via l'agument "id"
 const findLogementID = (id) => {
   return logement.find((logement) => logement.id === id);
 };
@@ -14,14 +16,14 @@ const findLogementID = (id) => {
 const Logement = () => {
   const { id } = useParams();
   const logementData = findLogementID(id);
-
+  // on déclare une variable d'état
   const [listeDeployee, setListeDeployee] = useState(false);
 
   const toggleListe = () => {
     setListeDeployee(!listeDeployee);
     console.log(listeDeployee);
   };
-
+  // S'il n'y a pas de données de logement correspondant à l'id extrait de l'URL, le composant retourne un message d'erreur avec un lien vers la page d'accueil.
   if (!logementData) {
     return (
       <div className="error">
@@ -34,10 +36,11 @@ const Logement = () => {
       </div>
     );
   }
-
+  // Les données du logement extraites sont déstructurées pour accéder à ses différentes propriétés.
   const { pictures, host, title, rating, location, equipments, description } =
     logementData;
 
+  // on construit la structure HTML
   return (
     <div className="carrousel-container">
       <div className="carrousel">

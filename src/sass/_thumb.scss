@@ -6,7 +6,6 @@
     transition: all 425ms ease-out;
 
     &:before {
-
         position: absolute;
         inset: 0;
         opacity: 50%;
@@ -16,16 +15,12 @@
         @media screen and (max-width: $breakpoint-desktop) {
             display: none;
         }
-
     }
-
-
-
 
     &:hover {
         transform: scale(1.1);
 
-        @media screen and (max-width:1050px) {
+        @media screen and (max-width: 1050px) {
             transform: none;
         }
     }
@@ -37,8 +32,6 @@
         position: relative;
     }
 
-
-
     h3 {
         position: absolute;
         text-align: left;
@@ -49,14 +42,12 @@
         color: $tertiary-color;
         font-size: 1.12rem;
         font-weight: 700;
-        line-height: 26px
+        line-height: 26px;
     }
 
     @media screen and (max-width: $breakpoint-desktop) {
-
-
         img {
-
+            min-width: 335px;
             height: 255px;
             margin-bottom: 30px;
         }
@@ -65,7 +56,6 @@
             top: -70px;
 
             z-index: 1;
-
         }
     }
 }

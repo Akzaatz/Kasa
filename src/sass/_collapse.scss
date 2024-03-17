@@ -1,10 +1,7 @@
 .collapse-container {
   align-items: center;
-  max-width: 1023px;
 
   .collapses-content {
-    width: 100%;
-
 
     .headCollapses {
       align-items: center;
@@ -16,13 +13,15 @@
       font-weight: 700;
       background: rgb(254, 96, 97);
 
+      @include small-radius;
+
       @media screen and (max-width: $breakpoint-desktop) {
         height: 30px;
         font-size: 0.813rem;
-
       }
 
       .arrow {
+
         cursor: pointer;
         transition: transform 0.5s ease; // Ajoute une transition pour l'effet de rotation
       }
@@ -34,7 +33,6 @@
       }
 
       .paragraph {
-
         visibility: visible;
         transition: opacity 0.3s ease; // Ajoute une transition pour l'animation
         padding: 20px 10px;
@@ -44,16 +42,19 @@
     }
 
     .paragraph {
-
       background: $secondary-color;
       font-size: 1.125rem;
       text-align: left;
       overflow: hidden;
       visibility: hidden;
       transform: translateY(-80px);
+      display: none;
 
       &.animate {
-        height: max-content;
+        display: flex; // Ajoutez display: flex ici
+        flex-direction: column; // Assurez-vous que le contenu est aligné verticalement
+        align-items: flex-start; // Alignez le contenu sur le côté gauche
+        padding: 20px 10px; // Ajoutez un rembourrage pour l'apparence
       }
 
       @media screen and (max-width: $breakpoint-desktop) {
@@ -69,9 +70,8 @@
 }
 
 .CollapsesButtons {
+  margin: auto;
   width: 100%;
-  margin: 0 10px;
-  margin-bottom: 20px; // Réduire la marge en bas
   display: flex;
   justify-content: space-between;
   gap: 75px;
@@ -79,17 +79,14 @@
   @media screen and (max-width: $breakpoint-desktop) {
     flex-direction: column;
     min-width: 335px;
-    gap: 0;
+    gap: 20px;
   }
-
-
 
   .description-button {
     width: 582px;
 
     @media screen and (max-width: $breakpoint-desktop) {
       width: 100%;
-
     }
   }
 

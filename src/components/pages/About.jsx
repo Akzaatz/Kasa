@@ -10,7 +10,7 @@ const About = () => {
         <div className="banner-about">
           <img src={banniere1} alt="Paysage de montagnes" />
         </div>
-        <div>
+        <div className="CollapsesButtons">
           {colapsJson.map((colaps, index) => (
             <Collapse key={index} title={colaps.Title} content={colaps.Text} />
           ))}

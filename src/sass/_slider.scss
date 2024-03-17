@@ -6,6 +6,11 @@
     flex-direction: column;
     align-items: center;
 
+
+    @media screen and (max-width: $breakpoint-desktop) {
+        margin: 0 10px;
+    }
+
     .slider-carrousel {
         position: relative;
 
@@ -22,11 +27,9 @@
             width: 1241px;
 
             @media screen and (max-width: $breakpoint-desktop) {
-
-
-
                 min-width: 335px;
                 height: 255px;
+
             }
         }
 
@@ -36,6 +39,7 @@
             cursor: pointer;
             position: absolute;
             font-size: 3.5rem;
+            transform: translate(-50%);
             top: 45%;
 
             @media screen and (max-width: $breakpoint-desktop) {
@@ -44,7 +48,7 @@
         }
 
         .fa-chevron-left {
-            left: 15px;
+            left: 25px;
         }
 
         .fa-chevron-right {

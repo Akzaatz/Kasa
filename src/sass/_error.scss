@@ -17,11 +17,16 @@
         font-weight: 500;
     }
 
+    a {
+        color: $fourth-color;
+    }
+
     .error-link {
         font-size: 1.125rem;
         font-weight: 500;
         margin: 140px 0;
         text-decoration: underline;
+
     }
 }
 

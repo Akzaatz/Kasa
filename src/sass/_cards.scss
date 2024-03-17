@@ -63,6 +63,7 @@
             @media screen and (max-width: $breakpoint-desktop) {
                 p {
                     font-size: 0.625rem;
+
                 }
             }
         }
@@ -97,7 +98,8 @@
             img {
                 width: 64px;
                 height: 64px;
-                border-radius: 50%;
+                // border-radius: 50%;
+                @include medium-radius;
                 margin-bottom: 15px;
             }
 
@@ -111,8 +113,8 @@
                 }
 
                 img {
-                    width: 32px;
-                    height: 32px;
+                    width: 52px;
+                    height: 52px;
                 }
             }
         }

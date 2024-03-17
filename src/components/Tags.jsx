@@ -5,10 +5,6 @@ import logements from "../components/data/logements.json";
 const Tags = ({ logementId }) => {
   const logement = logements.find((logement) => logement.id === logementId);
 
-  if (!logement) {
-    return null; // Gérer le cas où aucun logement n'est trouvé pour l'ID donné
-  }
-
   return (
     <ul className="tags-container-tags">
       {logement.tags.map((tag, index) => (

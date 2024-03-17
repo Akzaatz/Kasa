@@ -24,7 +24,7 @@ const Collapse = ({ title, content, onToggle }) => {
             onClick={handleToggle}
           />
         </div>
-        <div className={`paragraph ${isVisible ? "animate" : ""}`}>
+        <div className={`paragraph ${isVisible ? "animate flex" : ""}`}>
           {content}
         </div>
       </div>

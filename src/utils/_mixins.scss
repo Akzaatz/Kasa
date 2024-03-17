@@ -2,6 +2,10 @@
     border-radius: 10px;
 }
 
+@mixin medium-radius {
+    border-radius: 50%;
+}
+
 @mixin big-radius {
     border-radius: 25px;
 }
