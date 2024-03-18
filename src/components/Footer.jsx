@@ -1,7 +1,7 @@
 import React from "react";
 import logoFooter from "../assets/img/logoFooter.png";
 
-const Footer = ({ listeDeployee }) => {
+const Footer = () => {
   return (
     <div className="main-footer">
       <div className="footer">
