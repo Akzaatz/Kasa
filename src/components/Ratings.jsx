@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Ratings = ({ logement }) => {
-  // Nous utilisons parseInt pour convertir la valeur de la note du logement en un nombre entier
   const score = parseInt(logement.rating);
   const stars = [];
 
@@ -21,7 +20,6 @@ const Ratings = ({ logement }) => {
     </div>
   );
 };
-// Nous spécifions que le composant Ratings attend une propriété logement qui doit être un objet et qui est requise
 Ratings.propTypes = {
   logement: PropTypes.object.isRequired,
 };

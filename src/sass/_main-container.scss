@@ -46,7 +46,6 @@
                 @include big-radius;
 
                 @media screen and (max-width: $breakpoint-desktop) {
-                    // min-width: 335px;
                     height: 111px;
                 }
             }
@@ -87,7 +86,7 @@
             @media screen and (max-width: 1380px) {
                 width: 100%;
                 grid-template-columns: 1fr 1fr;
-                padding: 20px 0 0 0
+                padding: 20px 0 0 0;
             }
 
             @media screen and (max-width: $breakpoint-desktop) {
