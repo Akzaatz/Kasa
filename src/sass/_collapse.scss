@@ -11,7 +11,7 @@
       color: $tertiary-color;
       padding: 10px;
       font-weight: 700;
-      background: rgb(254, 96, 97);
+      background: $primary-color;
 
       @include small-radius;
 
