@@ -1,5 +1,5 @@
 import React from "react";
-import banniere from "../../assets/img/banniere.png";
+import banniere from "/img/banniere.png";
 import Thumb from "../Thumb";
 import logements from "../data/logements.json";
 import Banner from "../Banner";

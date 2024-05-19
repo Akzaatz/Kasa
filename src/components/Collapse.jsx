@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-import arrow from "../assets/img/arrow-up.png";
+import arrow from "/img/arrow-up.png";
 
 const Collapse = ({ title, content, onToggle }) => {
   const [isVisible, setIsVisible] = useState(false);

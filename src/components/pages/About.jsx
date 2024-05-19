@@ -1,5 +1,5 @@
 import React from "react";
-import banniere1 from "../../assets/img/mountains.png";
+import banniere1 from "/img/mountains.png";
 import Collapse from "../Collapse";
 import colapsJson from "../data/colaps.json";
 import Banner from "../Banner";

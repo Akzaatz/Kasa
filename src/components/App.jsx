@@ -7,8 +7,9 @@ import Error from "./pages/Error";
 import Logement from "./Logement";
 
 const App = () => {
+  const basename = import.meta.env.NODE === "production" ? "Kasa" : "";
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
